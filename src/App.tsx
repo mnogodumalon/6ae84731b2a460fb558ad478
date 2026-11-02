@@ -14,6 +14,9 @@ import { IntentPolicyLoader } from '@/components/IntentPolicyLoader';
 import IntentsAdmin from '@/pages/IntentsAdmin';
 import AppMap from '@/pages/AppMap';
 // <custom:imports>
+const IntentTreffenMitTerminenAnlegenPage = lazy(() => import('@/pages/intents/TreffenMitTerminenAnlegenPage'));
+import { DashboardSkeleton } from '@/components/DashboardStates';
+const IntentTerminFestlegenPage = lazy(() => import('@/pages/intents/TerminFestlegenPage'));
 // </custom:imports>
 
 // Lazy: public pages live outside <Layout> and only load on /#/public/:slug —
@@ -85,6 +88,8 @@ export default function App() {
                 <Route path="verwaltung/oeffentliche-seiten" element={<PublicPagesAdmin />} />
                 <Route path="verwaltung/oeffentliche-seiten/:slug/felder" element={<PublicPageFields />} />
                 {/* <custom:routes> */}
+                <Route path="intents/treffen-mit-terminen-anlegen" element={<Suspense fallback={<DashboardSkeleton />}><IntentTreffenMitTerminenAnlegenPage /></Suspense>} />
+                <Route path="intents/termin-festlegen" element={<Suspense fallback={<DashboardSkeleton />}><IntentTerminFestlegenPage /></Suspense>} />
                 {/* </custom:routes> */}
                 {/* An unknown hash (a bookmark from before a rebuild renamed the
                     flows, a mistyped link) must not be a blank page. */}

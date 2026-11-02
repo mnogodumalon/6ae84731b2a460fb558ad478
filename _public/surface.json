@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "slug": "termin-abstimmen",
+      "component": "TerminAbstimmen",
+      "title": "Termin abstimmen",
+      "endpoints": [
+        {
+          "entity": "treffen",
+          "op": "list",
+          "fields": [
+            "titel",
+            "beschreibung",
+            "ort",
+            "organisator_vorname",
+            "organisator_nachname"
+          ],
+          "scope": "r.v_status == 'offen'",
+          "scope_description": "zeigt nur Treffen mit Status offen",
+          "max_records": 100
+        },
+        {
+          "entity": "terminvorschlaege",
+          "op": "list",
+          "fields": [
+            "treffen",
+            "termin",
+            "anmerkung"
+          ],
+          "max_records": 500
+        },
+        {
+          "entity": "rueckmeldungen",
+          "op": "create",
+          "fields": [
+            "teilnehmer_vorname",
+            "teilnehmer_nachname",
+            "terminvorschlag",
+            "kommentar"
+          ],
+          "preset_fields": {
+            "antwort": "kann"
+          }
+        }
+      ]
+    }
+  ]
+}
