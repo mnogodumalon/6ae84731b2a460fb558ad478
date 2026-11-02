@@ -1,0 +1,358 @@
+{
+  "appgroup_id": "6ae84731b2a460fb558ad478",
+  "appgroup_name": "Terminabstimmung",
+  "apps": {
+    "treffen": {
+      "app_id": "6ae8471aa15b5146b6458da6",
+      "name": "Treffen",
+      "main": false,
+      "controls": {
+        "titel": {
+          "kind": "textcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/controls/titel",
+          "identifier": "titel",
+          "label": "Titel des Treffens",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "beschreibung": {
+          "kind": "textareacontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/controls/beschreibung",
+          "identifier": "beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": false,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "ort": {
+          "kind": "textcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/controls/ort",
+          "identifier": "ort",
+          "label": "Ort",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": false,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "organisator_vorname": {
+          "kind": "textcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/controls/organisator_vorname",
+          "identifier": "organisator_vorname",
+          "label": "Vorname des Organisators",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "organisator_nachname": {
+          "kind": "textcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/controls/organisator_nachname",
+          "identifier": "organisator_nachname",
+          "label": "Nachname des Organisators",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "status": {
+          "kind": "lookupradiocontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/controls/status",
+          "identifier": "status",
+          "label": "Status",
+          "type": "lookup",
+          "subtype": "radio",
+          "fulltype": "lookup/radio",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as radio button fields in HTML pages.",
+          "required": true,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": null,
+          "in_expert_search": true,
+          "translations": null,
+          "lookup_data": {
+            "offen": "Offen",
+            "termin_festgelegt": "Termin festgelegt",
+            "abgesagt": "Abgesagt"
+          },
+          "lookup_items": {
+            "offen": {
+              "kind": "lookupitem",
+              "url": null,
+              "label": "Offen",
+              "translations": null
+            },
+            "termin_festgelegt": {
+              "kind": "lookupitem",
+              "url": null,
+              "label": "Termin festgelegt",
+              "translations": null
+            },
+            "abgesagt": {
+              "kind": "lookupitem",
+              "url": null,
+              "label": "Abgesagt",
+              "translations": null
+            }
+          }
+        },
+        "festgelegter_termin": {
+          "kind": "datetimeminutecontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/controls/festgelegter_termin",
+          "identifier": "festgelegter_termin",
+          "label": "Festgelegter Termin",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` (or `null`/`None`).\n\nFor example: `2000-02-29T11:30`.\n\nFor `POST`/`PUT`/`PATCH` requests the REST API uses a liberal parsing approach so that strings like `2026`, `February 29, 2000 12:34 MEST`, `letztes Jahr` etc. will be accepted as value datetime values. However this runs the risk of parsing ambiguous values incorrectly. To ensure reliable parsing it is best to use the canonical format specified above.",
+          "required": false,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": null,
+          "in_expert_search": true,
+          "translations": null
+        }
+      }
+    },
+    "terminvorschlaege": {
+      "app_id": "6ae8471fbb4a2d9f69dd24e1",
+      "name": "Terminvorschläge",
+      "main": false,
+      "controls": {
+        "treffen": {
+          "kind": "applookupselectcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471fbb4a2d9f69dd24e1/controls/treffen",
+          "identifier": "treffen",
+          "label": "Treffen",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Treffen' with the id `6ae8471aa15b5146b6458da6` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6/records/<record-id>` (or `null`/`None`).\n\nWhen writing, either pass a record URL through exactly as this API returned it, or send the portable relative form `/apps/6ae8471aa15b5146b6458da6/records/<record-id>`. Other equivalent record-URL forms are accepted as well.\n\nDisplayed as single-select field in HTML pages.",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null,
+          "lookup_app": "https://my.living-apps.de/rest/v1/apps/6ae8471aa15b5146b6458da6",
+          "on_delete": null
+        },
+        "termin": {
+          "kind": "datetimeminutecontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471fbb4a2d9f69dd24e1/controls/termin",
+          "identifier": "termin",
+          "label": "Vorgeschlagener Termin",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` (or `null`/`None`).\n\nFor example: `2000-02-29T11:30`.\n\nFor `POST`/`PUT`/`PATCH` requests the REST API uses a liberal parsing approach so that strings like `2026`, `February 29, 2000 12:34 MEST`, `letztes Jahr` etc. will be accepted as value datetime values. However this runs the risk of parsing ambiguous values incorrectly. To ensure reliable parsing it is best to use the canonical format specified above.",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "anmerkung": {
+          "kind": "textcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae8471fbb4a2d9f69dd24e1/controls/anmerkung",
+          "identifier": "anmerkung",
+          "label": "Anmerkung",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": false,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        }
+      }
+    },
+    "rueckmeldungen": {
+      "app_id": "6ae84720ea391faafe2b4611",
+      "name": "Rückmeldungen",
+      "main": false,
+      "controls": {
+        "teilnehmer_vorname": {
+          "kind": "textcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae84720ea391faafe2b4611/controls/teilnehmer_vorname",
+          "identifier": "teilnehmer_vorname",
+          "label": "Vorname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "teilnehmer_nachname": {
+          "kind": "textcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae84720ea391faafe2b4611/controls/teilnehmer_nachname",
+          "identifier": "teilnehmer_nachname",
+          "label": "Nachname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        },
+        "terminvorschlag": {
+          "kind": "applookupselectcontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae84720ea391faafe2b4611/controls/terminvorschlag",
+          "identifier": "terminvorschlag",
+          "label": "Terminvorschlag",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Terminvorschläge' with the id `6ae8471fbb4a2d9f69dd24e1` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/v1/apps/6ae8471fbb4a2d9f69dd24e1/records/<record-id>` (or `null`/`None`).\n\nWhen writing, either pass a record URL through exactly as this API returned it, or send the portable relative form `/apps/6ae8471fbb4a2d9f69dd24e1/records/<record-id>`. Other equivalent record-URL forms are accepted as well.\n\nDisplayed as single-select field in HTML pages.",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null,
+          "lookup_app": "https://my.living-apps.de/rest/v1/apps/6ae8471fbb4a2d9f69dd24e1",
+          "on_delete": null
+        },
+        "antwort": {
+          "kind": "lookupradiocontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae84720ea391faafe2b4611/controls/antwort",
+          "identifier": "antwort",
+          "label": "Kannst du an diesem Termin?",
+          "type": "lookup",
+          "subtype": "radio",
+          "fulltype": "lookup/radio",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as radio button fields in HTML pages.",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null,
+          "lookup_data": {
+            "kann": "Ja, ich kann",
+            "kann_evtl": "Vielleicht",
+            "kann_nicht": "Nein, ich kann nicht"
+          },
+          "lookup_items": {
+            "kann": {
+              "kind": "lookupitem",
+              "url": null,
+              "label": "Ja, ich kann",
+              "translations": null
+            },
+            "kann_evtl": {
+              "kind": "lookupitem",
+              "url": null,
+              "label": "Vielleicht",
+              "translations": null
+            },
+            "kann_nicht": {
+              "kind": "lookupitem",
+              "url": null,
+              "label": "Nein, ich kann nicht",
+              "translations": null
+            }
+          }
+        },
+        "kommentar": {
+          "kind": "textareacontrol",
+          "url": "https://my.living-apps.de/rest/v1/apps/6ae84720ea391faafe2b4611/controls/kommentar",
+          "identifier": "kommentar",
+          "label": "Kommentar",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": false,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "translations": null
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Treffen",
+      "Terminvorschläge",
+      "Rückmeldungen"
+    ]
+  }
+}

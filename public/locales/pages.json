@@ -1,0 +1,41 @@
+{
+  "pages": {
+    "en": {
+      "1 Teilnehmer": "1 participant",
+      "1 Terminvorschlag": "1 date proposal",
+      "Alle Treffen haben einen Termin — Zeit für das nächste.": "All meetings have a date — time for the next one.",
+      "Alles entschieden": "All decided",
+      "Auf „{0}“ hat noch niemand geantwortet.": "Nobody has responded to \"{0}\" yet.",
+      "Beste Übereinstimmung": "Best match",
+      "Erstes Treffen anlegen": "Create first meeting",
+      "Festgelegt: {0}": "Set: {0}",
+      "Festlegen": "Set",
+      "Ja · Vielleicht · Nein": "Yes · Maybe · No",
+      "Kein kommender Termin": "No upcoming date",
+      "Keine Treffen in dieser Ansicht.": "No meetings in this view.",
+      "Keine offenen Treffen.": "No open meetings.",
+      "Kommende Termine": "Upcoming dates",
+      "Lege dein erstes Treffen an und schlage Termine vor.": "Create your first meeting and propose dates.",
+      "Link noch verteilen?": "Share the link yet?",
+      "Neues Treffen": "New meeting",
+      "Noch kein Termin festgelegt.": "No date set yet.",
+      "Noch kein Treffen — schlage deine ersten Termine vor.": "No meeting yet — propose your first dates.",
+      "Noch keine Terminvorschläge.": "No date proposals yet.",
+      "Nächster: {0}": "Next: {0}",
+      "Offene Treffen": "Open meetings",
+      "Ohne Antworten": "No responses",
+      "Termin festgelegt": "Date set",
+      "Termin festlegen": "Set date",
+      "Terminvorschlag": "Date proposal",
+      "Warten auf einen Termin": "Waiting for a date",
+      "Wartet auf Antworten": "Waiting for responses",
+      "Zu jedem offenen Treffen gibt es Antworten.": "Every open meeting has responses.",
+      "ohne Datum": "no date",
+      "{0} Teilnehmer": "{0} participants",
+      "{0} Terminvorschläge": "{0} date proposals",
+      "{0} wartet auf eine Entscheidung.": "{0} is waiting for a decision.",
+      "Überall wurde geantwortet": "Everyone has responded"
+    }
+  },
+  "v": 1
+}

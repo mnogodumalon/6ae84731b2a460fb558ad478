@@ -1,0 +1,21 @@
+{
+  "TreffenDialog.tsx": {
+    "titel": "z. B. Teamabend im Mai",
+    "beschreibung": "Worum geht es bei dem Treffen?",
+    "ort": "z. B. Café Central, Berlin",
+    "organisator_vorname": "z. B. Anna",
+    "organisator_nachname": "z. B. Müller",
+    "festgelegter_termin": "Wann findet es statt?"
+  },
+  "TerminvorschlaegeDialog.tsx": {
+    "treffen": "Welches Treffen?",
+    "termin": "Wann könnte es stattfinden?",
+    "anmerkung": "z. B. Lieber nach 18 Uhr"
+  },
+  "RueckmeldungenDialog.tsx": {
+    "teilnehmer_vorname": "z. B. Anna",
+    "teilnehmer_nachname": "z. B. Müller",
+    "terminvorschlag": "Welcher Terminvorschlag?",
+    "kommentar": "Anmerkungen zum Termin"
+  }
+}
