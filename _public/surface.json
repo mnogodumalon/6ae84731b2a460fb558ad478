@@ -37,11 +37,9 @@
             "teilnehmer_vorname",
             "teilnehmer_nachname",
             "terminvorschlag",
+            "antwort",
             "kommentar"
-          ],
-          "preset_fields": {
-            "antwort": "kann"
-          }
+          ]
         }
       ]
     }
