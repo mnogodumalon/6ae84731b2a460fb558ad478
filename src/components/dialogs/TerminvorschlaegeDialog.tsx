@@ -339,7 +339,7 @@ export function TerminvorschlaegeDialog({ open, onClose, onSubmit, defaultValues
         <Label htmlFor="treffen">{fieldLabel('terminvorschlaege', 'treffen')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="treffen"
-          placeholder="Welches Treffen?"
+          placeholder=""
           items={treffenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.titel ?? r.record_id),
@@ -359,7 +359,7 @@ export function TerminvorschlaegeDialog({ open, onClose, onSubmit, defaultValues
         <Label htmlFor="termin">{fieldLabel('terminvorschlaege', 'termin')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="termin"
-          placeholder="Wann könnte es stattfinden?"
+          placeholder=""
           mode="datetime"
           value={fields.termin ?? null}
           onChange={v => setFields(f => ({ ...f, termin: v ?? undefined }))}
@@ -375,7 +375,7 @@ export function TerminvorschlaegeDialog({ open, onClose, onSubmit, defaultValues
         <Label htmlFor="anmerkung">{fieldLabel('terminvorschlaege', 'anmerkung')}</Label>
         <Input
           id="anmerkung"
-          placeholder="z. B. Lieber nach 18 Uhr"
+          placeholder=""
           value={fields.anmerkung ?? ''}
           onChange={e => setFields(f => ({ ...f, anmerkung: e.target.value }))}
         />

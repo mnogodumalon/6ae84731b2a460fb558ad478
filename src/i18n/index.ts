@@ -1671,7 +1671,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
     }
   },
   "en": {
-    "appgroup": "Scheduling Poll",
+    "appgroup": "Scheduling",
     "apps": {
       "treffen": {
         "name": "Meetings",

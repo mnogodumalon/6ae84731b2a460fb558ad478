@@ -349,7 +349,7 @@ export function RueckmeldungenDialog({ open, onClose, onSubmit, defaultValues, r
         <Label htmlFor="teilnehmer_vorname">{fieldLabel('rueckmeldungen', 'teilnehmer_vorname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="teilnehmer_vorname"
-          placeholder="z. B. Anna"
+          placeholder=""
           value={fields.teilnehmer_vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, teilnehmer_vorname: e.target.value }))}
           required
@@ -364,7 +364,7 @@ export function RueckmeldungenDialog({ open, onClose, onSubmit, defaultValues, r
         <Label htmlFor="teilnehmer_nachname">{fieldLabel('rueckmeldungen', 'teilnehmer_nachname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="teilnehmer_nachname"
-          placeholder="z. B. Müller"
+          placeholder=""
           value={fields.teilnehmer_nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, teilnehmer_nachname: e.target.value }))}
           required
@@ -379,7 +379,7 @@ export function RueckmeldungenDialog({ open, onClose, onSubmit, defaultValues, r
         <Label htmlFor="terminvorschlag">{fieldLabel('rueckmeldungen', 'terminvorschlag')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="terminvorschlag"
-          placeholder="Welcher Terminvorschlag?"
+          placeholder=""
           items={terminvorschlaegeListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.anmerkung ?? r.record_id),
@@ -448,7 +448,7 @@ export function RueckmeldungenDialog({ open, onClose, onSubmit, defaultValues, r
         <Label htmlFor="kommentar">{fieldLabel('rueckmeldungen', 'kommentar')}</Label>
         <Textarea
           id="kommentar"
-          placeholder="Anmerkungen zum Termin"
+          placeholder=""
           value={fields.kommentar ?? ''}
           onChange={e => setFields(f => ({ ...f, kommentar: e.target.value }))}
           rows={3}

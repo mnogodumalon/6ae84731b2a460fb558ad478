@@ -1,7 +1,7 @@
 /**
  * useTreffenMitTerminenAnlegenFlow — the plumbing of the flow « Treffen mit Terminen anlegen », generated from the plan.
  *
- * Writes `treffen`: asks `titel`, `beschreibung`, `ort`, `organisator_vorname`, `organisator_nachname`; sets `status` itself.
+ * Writes `treffen`: asks `ort`, `titel`, `beschreibung`, `organisator_vorname`, `organisator_nachname`; sets `status` itself.
 Writes `terminvorschlaege`: asks `termin`, `anmerkung`; links `treffen` ← the created `treffen`.
  * The hook OWNS: the form(s) with exactly these fields and the plan's required
  * ingredients, one record search per picked field (columns and filter from
@@ -17,12 +17,12 @@ Writes `terminvorschlaege`: asks `termin`, `anmerkung`; links `treffen` ← the 
  *   messages  the sentence for an empty required field, per field
  *
  *   const flow = useTreffenMitTerminenAnlegenFlow({
- *     steps: { titel: 1, beschreibung: 1, ort: 1, organisator_vorname: 1, organisator_nachname: 1, termin: 1, anmerkung: 1 },
+ *     steps: { ort: 1, titel: 1, beschreibung: 1, organisator_vorname: 1, organisator_nachname: 1, termin: 1, anmerkung: 1 },
  *   });
  *   <IntentWizardShell forms={flow.forms} draftKey={flow.draftKey} …>
+ *     <Bound form={flow.forms.treffen} name="ort" />
  *     <Bound form={flow.forms.treffen} name="titel" />
  *     <Bound form={flow.forms.treffen} name="beschreibung" />
- *     <Bound form={flow.forms.treffen} name="ort" />
  *     <Bound form={flow.forms.treffen} name="organisator_vorname" />
  *     <Bound form={flow.forms.treffen} name="organisator_nachname" />
  *     <Bound form={flow.forms.terminvorschlaege} name="termin" />
@@ -83,10 +83,10 @@ function hasValues(form: StepForm): boolean {
 export function useTreffenMitTerminenAnlegenFlow(options: TreffenMitTerminenAnlegenFlowOptions = {}) {
   const steps = { ...DEFAULT_STEPS, ...(options.steps ?? {}) } as Record<string, number>;
   const treffen = useStepForm('treffen', {
-    fields: ["titel", "beschreibung", "ort", "organisator_vorname", "organisator_nachname"],
-    steps: only(steps, ["titel", "beschreibung", "ort", "organisator_vorname", "organisator_nachname"]) as Record<string, number>,
-    initial: only(options.initial as FormValues | undefined, ["titel", "beschreibung", "ort", "organisator_vorname", "organisator_nachname"]),
-    messages: only(options.messages as Record<string, string> | undefined, ["titel", "beschreibung", "ort", "organisator_vorname", "organisator_nachname"]),
+    fields: ["ort", "titel", "beschreibung", "organisator_vorname", "organisator_nachname"],
+    steps: only(steps, ["ort", "titel", "beschreibung", "organisator_vorname", "organisator_nachname"]) as Record<string, number>,
+    initial: only(options.initial as FormValues | undefined, ["ort", "titel", "beschreibung", "organisator_vorname", "organisator_nachname"]),
+    messages: only(options.messages as Record<string, string> | undefined, ["ort", "titel", "beschreibung", "organisator_vorname", "organisator_nachname"]),
   });
   const terminvorschlaege = useStepForm('terminvorschlaege', {
     fields: ["termin", "anmerkung"],

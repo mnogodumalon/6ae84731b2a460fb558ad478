@@ -411,7 +411,7 @@ if (gridIdx >= 0) {
 // owner's prompt asked for). The page opens the flow for the record:
 // flowActionFor(entity, field, id, value) from '@/config/plan'.
 {
-  const OWNED = {"updateTreffenEntry": {"entity": "treffen", "fields": {"festgelegter_termin": [{"slug": "termin-festlegen"}], "status": [{"slug": "termin-festlegen", "value": "termin_festgelegt"}]}}};
+  const OWNED = {"updateTreffenEntry": {"entity": "treffen", "fields": {"status": [{"slug": "termin-festlegen", "value": "termin_festgelegt"}], "festgelegter_termin": [{"slug": "termin-festlegen"}]}}};
   const callRe = /\b(update\w+Entry)\s*\(/g;
   let m;
   const hits = [];

@@ -43,8 +43,8 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
-  { path: '/intents/treffen-mit-terminen-anlegen', label: { de: 'Treffen mit Terminen anlegen', en: 'Create meeting with proposed dates' }, icon: IconCalendarPlus, description: 'Treffen anlegen und gleich mehrere Terminvorschläge erfassen' },
-  { path: '/intents/termin-festlegen', label: { de: 'Termin festlegen', en: 'Confirm date' }, icon: IconCalendarCheck, description: 'Rückmeldungen je Terminvorschlag ansehen und den Termin festlegen' },
+  { path: '/intents/treffen-mit-terminen-anlegen', label: { de: 'Treffen mit Terminen anlegen', en: 'Create meeting with proposed dates' }, icon: IconCalendarPlus, description: { de: 'Treffen anlegen und gleich mehrere Terminvorschläge erfassen', en: 'Create meeting and enter several proposed dates at once' } },
+  { path: '/intents/termin-festlegen', label: { de: 'Termin festlegen', en: 'Confirm date' }, icon: IconCalendarCheck, description: { de: 'Rückmeldungen je Terminvorschlag ansehen und den Termin festlegen', en: 'View responses per proposed date and confirm the date' } },
   // </custom:intents>
 ];
 
@@ -64,5 +64,5 @@ export const INTENTS_PENDING = false;
  * pulsing "werden erstellt …" in every deployed Phase-1 bundle forever — no
  * code path redeploys Phase 1 without the flag (live 03.09.2026).
  */
-export const INTENTS_PENDING_SINCE: string | null = '2026-11-02T08:19:04+00:00';
+export const INTENTS_PENDING_SINCE: string | null = null;
 export const PENDING_MAX_MINUTES = 30;

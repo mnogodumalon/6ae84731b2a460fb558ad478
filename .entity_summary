@@ -64,7 +64,7 @@ createRecordUrl from the service. Note the lowercase `l` in the service path.
   ✚ EnrichedTerminvorschlaege adds ONLY treffenName — via enrichTerminvorschlaege(terminvorschlaege, { treffenMap }), all maps required
   → treffen links to app_id 6ae8471aa15b5146b6458da6
 - Rückmeldungen (rueckmeldungen): teilnehmer_vorname!^[string/text] "Vorname", teilnehmer_nachname!^[string/text] "Nachname", terminvorschlag!^[applookup/select], antwort!^[lookup/radio: kann=Ja, ich kann|kann_evtl=Vielleicht|kann_nicht=Nein, ich kann nicht] "Kannst du an diesem Termin?", kommentar^[string/textarea]
-  ≡ 3 records at build time
+  ≡ 4 records at build time
   ◈ antwort → choice (3 options, ChoiceGroup) · terminvorschlag → record (terminvorschlaege, EntitySelectStep)
   ⚙ getRueckmeldungen() · getRueckmeldungenEntry(id) · createRueckmeldungenEntry(fields) · updateRueckmeldungenEntry(id, fields) · deleteRueckmeldungenEntry(id) · queryRueckmeldungen({ filter, orderby, limit, offset, fields }) · countRueckmeldungen(filter?)
   ✚ EnrichedRueckmeldungen adds ONLY terminvorschlagName — via enrichRueckmeldungen(rueckmeldungen, { terminvorschlaegeMap }), all maps required

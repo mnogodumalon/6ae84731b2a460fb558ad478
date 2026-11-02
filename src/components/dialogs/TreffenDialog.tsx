@@ -312,7 +312,7 @@ export function TreffenDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="titel">{fieldLabel('treffen', 'titel')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="titel"
-          placeholder="z. B. Teamabend im Mai"
+          placeholder=""
           value={fields.titel ?? ''}
           onChange={e => setFields(f => ({ ...f, titel: e.target.value }))}
           required
@@ -327,7 +327,7 @@ export function TreffenDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="beschreibung">{fieldLabel('treffen', 'beschreibung')}</Label>
         <Textarea
           id="beschreibung"
-          placeholder="Worum geht es bei dem Treffen?"
+          placeholder=""
           value={fields.beschreibung ?? ''}
           onChange={e => setFields(f => ({ ...f, beschreibung: e.target.value }))}
           rows={3}
@@ -339,7 +339,7 @@ export function TreffenDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="ort">{fieldLabel('treffen', 'ort')}</Label>
         <Input
           id="ort"
-          placeholder="z. B. Café Central, Berlin"
+          placeholder=""
           value={fields.ort ?? ''}
           onChange={e => setFields(f => ({ ...f, ort: e.target.value }))}
         />
@@ -350,7 +350,7 @@ export function TreffenDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="organisator_vorname">{fieldLabel('treffen', 'organisator_vorname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="organisator_vorname"
-          placeholder="z. B. Anna"
+          placeholder=""
           value={fields.organisator_vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, organisator_vorname: e.target.value }))}
           required
@@ -365,7 +365,7 @@ export function TreffenDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="organisator_nachname">{fieldLabel('treffen', 'organisator_nachname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="organisator_nachname"
-          placeholder="z. B. Müller"
+          placeholder=""
           value={fields.organisator_nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, organisator_nachname: e.target.value }))}
           required
@@ -429,7 +429,7 @@ export function TreffenDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="festgelegter_termin">{fieldLabel('treffen', 'festgelegter_termin')}</Label>
         <DatePicker
           id="festgelegter_termin"
-          placeholder="Wann findet es statt?"
+          placeholder=""
           mode="datetime"
           value={fields.festgelegter_termin ?? null}
           onChange={v => setFields(f => ({ ...f, festgelegter_termin: v ?? undefined }))}
