@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "flows": [
+    {
+      "path": "/intents/treffen-mit-terminen-anlegen",
+      "label": "Treffen mit Terminen anlegen",
+      "description": "Treffen anlegen und gleich mehrere Terminvorschläge erfassen",
+      "file": "src/pages/intents/TreffenMitTerminenAnlegenPage.tsx",
+      "summary": "/**\n * Treffen mit Terminen anlegen — 3-Schritt-Wizard.\n * Steps: 1) Treffen beschreiben → 2) Terminvorschlag erfassen → 3) Prüfen & speichern.\n * Reads: — (nur Eingaben). Writes: treffen (Status „offen“ automatisch), terminvorschlaege (verknüpft mit dem neuen Treffen).\n * Composes: IntentWizardShell, Bound, StepNav, SummaryStep, SuccessStep.\n */",
+      "components": [
+        "Bound",
+        "IntentWizardShell",
+        "StepNav",
+        "SuccessStep",
+        "SummaryStep",
+        "WizardStep"
+      ],
+      "writes": []
+    },
+    {
+      "path": "/intents/termin-festlegen",
+      "label": "Termin festlegen",
+      "description": "Rückmeldungen je Terminvorschlag ansehen und den Termin festlegen",
+      "file": "src/pages/intents/TerminFestlegenPage.tsx",
+      "summary": "/**\n * Termin festlegen — 4-Schritt-Wizard.\n * Steps: 1) Offenes Treffen wählen → 2) Terminvorschläge mit Rückmeldungen ansehen\n *        → 3) Terminvorschlag auswählen → 4) Prüfen & Termin übernehmen (Status „Termin festgelegt“).\n * Reads: treffen, terminvorschlaege, rueckmeldungen. Writes: treffen (update festgelegter_termin + status via useTerminFestlegenFlow).\n * Composes: IntentWizardShell, EntitySelectStep, StepNav, SummaryStep, SuccessStep.\n */",
+      "components": [
+        "EntitySelectStep",
+        "Field",
+        "IntentWizardShell",
+        "StepNav",
+        "SuccessStep",
+        "SummaryStep",
+        "WizardStep"
+      ],
+      "writes": []
+    }
+  ],
+  "unregistered_pages": []
+}

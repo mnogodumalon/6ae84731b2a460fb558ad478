@@ -46,6 +46,7 @@ function Inner({ port }: { port: JourneyPort }) {
   const [propsLoaded, setPropsLoaded] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [step, setStep] = useState(1);
+  const [attempted, setAttempted] = useState(false);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const answersRef = useRef(answers);
   answersRef.current = answers;
@@ -202,7 +203,8 @@ function Inner({ port }: { port: JourneyPort }) {
                       value={a.antwort}
                       onChange={key => setAnswer(p.id, { antwort: key })}
                       options={antwortOptions}
-                      allowClear
+                      required
+                      invalid={!a.antwort && attempted}
                     />
                     <Textarea
                       rows={2}
@@ -221,8 +223,10 @@ function Inner({ port }: { port: JourneyPort }) {
             onBack={() => setStep(1)}
             nextStepLabel={tx('Prüfen')}
             onNext={() => {
+              setAttempted(true);
               if (!f.validate(['teilnehmer_vorname', 'teilnehmer_nachname'])) return false;
-              if (answeredCount === 0) return tx('Bitte beantworte mindestens einen Terminvorschlag.');
+              if (myProposals.length === 0) return tx('Für dieses Treffen gibt es noch keine Terminvorschläge.');
+              if (answeredCount < myProposals.length) return tx('Bitte wähle bei jedem Termin Ja, Vielleicht oder Nein.');
               return true;
             }}
           />
